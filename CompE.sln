@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompE.Domain", "CompE.Domain\CompE.Domain.csproj", "{36AC08D8-7096-4487-93D6-CC8D5E666275}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompE.Console.GateTest", "CompE.Console.GateTest\CompE.Console.GateTest.csproj", "{C589B551-DEBE-4E70-A2B5-FED4CF3E0813}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{36AC08D8-7096-4487-93D6-CC8D5E666275}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36AC08D8-7096-4487-93D6-CC8D5E666275}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36AC08D8-7096-4487-93D6-CC8D5E666275}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C589B551-DEBE-4E70-A2B5-FED4CF3E0813}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C589B551-DEBE-4E70-A2B5-FED4CF3E0813}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C589B551-DEBE-4E70-A2B5-FED4CF3E0813}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C589B551-DEBE-4E70-A2B5-FED4CF3E0813}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
