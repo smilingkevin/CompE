@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompE.Domain", "CompE.Domai
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompE.Console.GateTest", "CompE.Console.GateTest\CompE.Console.GateTest.csproj", "{C589B551-DEBE-4E70-A2B5-FED4CF3E0813}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompE.Testing", "CompE.Testing\CompE.Testing.csproj", "{94D43E85-A955-4852-82E4-71F22C4AB241}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{C589B551-DEBE-4E70-A2B5-FED4CF3E0813}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C589B551-DEBE-4E70-A2B5-FED4CF3E0813}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C589B551-DEBE-4E70-A2B5-FED4CF3E0813}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94D43E85-A955-4852-82E4-71F22C4AB241}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94D43E85-A955-4852-82E4-71F22C4AB241}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94D43E85-A955-4852-82E4-71F22C4AB241}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94D43E85-A955-4852-82E4-71F22C4AB241}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

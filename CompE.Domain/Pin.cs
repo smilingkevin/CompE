@@ -1,16 +1,11 @@
-﻿namespace CompE.Domain
-{
-    public enum PinType
-    {
-        Input,
-        Output
-    }
+﻿using System;
 
-    public class Pin
+namespace CompE.Domain
+{
+    public class Pin : IListener
     {
         public string Label { get; set; }
-        public PinType Type { get; set; }
-        public Pin Connection { get; set; }
+        public IListener Connection { get; set; }
 
         protected bool _value;
 
@@ -18,14 +13,6 @@
         {
             _value = false;
         }
-    }
-
-    public class InputPin : Pin
-    {
-        public InputPin() : base()
-        {
-            Type = PinType.Input;
-        }
 
         public bool Value
         {
@@ -37,31 +24,14 @@
             set
             {
                 _value = value;
+                Connection.Update();
             }
         }
-    }
 
-    public class OutputPin : Pin
-    {
-        public OutputPin() : base()
-        {
-            Type = PinType.Output;
-        }
 
-        public bool Value
+        public void Update()
         {
-            get
-            {
-                return _value;
-            }
-            set
-            {
-                _value = value;
-                if (Connection != null)
-                {
-                    ((InputPin)Connection).Value = _value;
-                }
-            }
+            throw new NotImplementedException();
         }
     }
 }
