@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Extensions.cs" />
     <Compile Include="IListener.cs" />
+    <Compile Include="ISpeaker.cs" />
     <Compile Include="LogicGates.cs" />
     <Compile Include="Pin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

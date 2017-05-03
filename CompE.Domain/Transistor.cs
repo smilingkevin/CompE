@@ -1,48 +1,30 @@
-﻿namespace CompE.Domain
+﻿using System;
+using System.Collections.Generic;
+
+namespace CompE.Domain
 {
-    public class Transistor
+    public class Transistor : IListener, ISpeaker
     {
-        private InputPin _base = new InputPin();
-        private InputPin _collector = new InputPin();
-        private OutputPin _emitter = new OutputPin();
+        public Pin Base { get; set; }
+        public Pin Emitter { get; set; }
+        public Pin Collector { get; set; }
+        public List<IListener> Listeners { get; set; }
 
         public Transistor()
         {
+            Base = new Pin();
+            Emitter = new Pin();
+            Collector = new Pin();
+            Listeners = new List<IListener>();
+
+            Base.Listeners.Add(this);
+            Collector.Listeners.Add(this);    
         }
 
-        public InputPin Base
+        public void Update()
         {
-            get
-            {
-                return _base;
-            }
-            set
-            {
-                _base = value;
-                _emitter.Value = _base.Value && _collector.Value;
-            }
-        }
-        public InputPin Collector
-        {
-            get
-            {
-                return _collector;
-            }
-            set
-            {
-                _collector = value;
-                _emitter.Value = _base.Value && _collector.Value;
-            }
-        }
-        public OutputPin Emitter {
-            get
-            {
-                return _emitter;
-            }
-            set
-            {
-                _emitter = value;
-            }
+            Emitter.Value = Base.Value && Collector.Value;
+            Listeners.ForEach(x => x.Update());
         }
     }
 }
